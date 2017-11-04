@@ -2308,8 +2308,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #252525;
+  border-color: white;
 }
 
 .btn-primary:hover {
@@ -5721,7 +5721,7 @@ a.bg-light:focus, a.bg-light:hover {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #252525 !important;
 }
 
 a.bg-dark:focus, a.bg-dark:hover {
