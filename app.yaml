@@ -1,0 +1,21 @@
+# Begin Basic GAE Setup for hosting a static website
+application: everydaykenneth-142007
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: false
+
+handlers:
+- url: /(.*\.(gif|png|jpg|ico|js|css|svg|woff|woff2|eot|ttf|otf))
+  static_files: \1
+  upload: (.*\.(gif|png|jpg|ico|js|css|svg|woff|woff2|eot|ttf|otf))
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt 
+
+# End Basic Setup for GAE
+
+# Generic Rule goes last and is absolutely necessary
+- url: .*
+  script: main.py
