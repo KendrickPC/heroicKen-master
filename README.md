@@ -26,3 +26,8 @@ Joining tables
 The select ...where statement
 Select clauses
 Writing
+
+
+To Do List: 
+[] Update the 1965 Celtics and Lakers pictures. 
+[] 
