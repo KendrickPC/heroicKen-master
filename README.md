@@ -29,5 +29,5 @@ Writing
 
 
 To Do List: 
-[] Update the 1965 Celtics and Lakers pictures. 
+[] 
 [] 
