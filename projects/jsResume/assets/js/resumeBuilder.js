@@ -11,7 +11,7 @@ var bio = {
     },
     "welcomeMessage": "",
     "skills": ["HTML", "CSS", "Javascript", "Ruby"],
-    "biopic": "assets/images/fry.jpg",
+    "biopic": "assets/images/kendrick.jpg",
     "display": function () {
         $("#header").append(HTMLimgDiv);
         $(".img-div").append(HTMLbioPic.replace("%data%", bio.biopic));
