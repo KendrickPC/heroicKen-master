@@ -1,6 +1,9 @@
-var ctx = document.getElementById("myChart").getContext('2d');
+/*jslint browser:true, white:true */
+/*global Chart */
+
+var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
-  type: 'polarArea',
+  type: "polarArea",
   data: {
     labels: ["HTML", "JQUERY", "JAVASCRIPT", "PYTHON", "CSS", "RUBY", "API"],
     datasets: [{
@@ -19,8 +22,11 @@ var myChart = new Chart(ctx, {
 });
 
 
+var data = "something";
+var options = "something else";
+
 new Chart(ctx, {
     data: data,
-    type: 'polarArea',
+    type: "polarArea",
     options: options
 });
