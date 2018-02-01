@@ -34,3 +34,5 @@ To Do List:
 
 GIT Problem:
 Updates were rejected because the tip of your current branch is behind
+
+Node modules deleted
