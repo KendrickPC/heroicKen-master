@@ -20,4 +20,13 @@ body {
 
 .display-5 {
 	margin-top: 1px;
+	color: white;
+}
+
+.backgroundImage {
+	background-image: url(../images/homepage/taipei1013.png);
+}
+
+.lead {
+	color: white;
 }
