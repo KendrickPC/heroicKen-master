@@ -5,9 +5,17 @@
  */
 
 body {
-  background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
+  background: url('../images/wallpaper.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+/*nav-item {
+	color: black;
+}*/
+
+.textInImage {
+	margin-top: 10em;
 }
