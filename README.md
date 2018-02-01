@@ -31,3 +31,6 @@ Writing
 To Do List: 
 [] Get the Google Maps API Key renewed. 
 [] 
+
+GIT Problem:
+Updates were rejected because the tip of your current branch is behind
