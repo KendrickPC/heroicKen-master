@@ -33,15 +33,7 @@
               </li>
               <li class="divider" role="separator"></li>
               <li>
-                <a href="#">Music Blog</a>
-              </li>
-              <li class="divider" role="separator"></li>
-              <li>
-                <a href="#">Gratitude Blog</a>
-              </li>
-              <li class="divider" role="separator"></li>
-              <li>
-                <a href="#">Basketball Blog</a>
+                <a href="#">Life Blog</a>
               </li>
             </ul>
           </li>
@@ -70,18 +62,25 @@
         <hr>
         <!-- Post Content -->
         <p class="lead">Host your own website on Google App Engine</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-        <blockquote class="blockquote">
+        <p><strong>Step 1:</strong> Go to <a href="http://www.appengine.google.com" target="_blank">appengine.google.com</a> and create a new application. If you have never used App Engine before, you might be asked to verify your mobile phone number before you can create a new app.</p>
+        <p><strong>Step 2:</strong>Give your application a name – it should be unique and may only include lowercase alphabets and digits. For this example, our app identifier is “thisismynewgooglewebsite”.</p>
+<!--         <blockquote class="blockquote">
           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           <footer class="blockquote-footer">
             Someone famous in <cite title="Source Title">Source Title</cite>
           </footer>
-        </blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-        <hr>
-        <!-- Comments Form -->
+        </blockquote> -->
+        <p><strong>Step 3:</strong>The next two sub-steps may scare some of you but trust me, they simply require you download and run two installers in the given sequence.
+        <br>
+        <strong>3a.</strong>Download and install Python from <a href="https://www.python.org/downloads/" target="_blank">python.org. </a>
+        <br>
+        <strong>3b.</strong>Download and install the Standard or Flexible Python Environment SDK for <a href="https://cloud.google.com/appengine/downloads" target="_blank">Google App Engine</a></p>
+        <p><strong>Step 4:</strong>Download and unzip this folder <a href="https://github.com/KendrickPC/googleWebsite/archive/master.zip" target="_blank"> googleWebsite-master.zip </a> somewhere on your desktop. It contains a basic website with some HTML pages, images and CSS that we’ll try to host with Google App Engine.</p>
+        <p><strong>Step 5:</strong> Open the app.yaml file with a notepad and replace the word ‘everydaykenneth’ with the application identifier that you created in Step 2 above. Be sure to SAVE the changes</p>
+        <p><strong>Step 6:</strong> Now it’s time to upload/deploy our website to Google App Engine. First, open the Google App Engine Launcher program from the Start Menu, choose File –-> Add Existing Application and browse to the folder where you unzipped the website.</p>
+        
+        <p><strong>Step 7:</strong> Hit the deploy button, input your Google Account credentials and within seconds, your website should become available online at abc.appspot.com where abc is your unique app identifier. Later, if you update or modify your webpage, press <strong>deploy</strong> again and your new and/or edited files will get uploaded to Google's servers.</p>
+        
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
@@ -91,13 +90,15 @@
               </div><button class="btn btn-primary" type="submit">Submit</button>
             </form>
           </div>
-        </div><!-- Single Comment -->
+        </div>
+        
         <div class="media mb-4">
           <img alt="" class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
           <div class="media-body">
             <h5 class="mt-0">Commenter Name</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           </div>
-        </div><!-- Comment with nested comments -->
+        </div>
+
         <div class="media mb-4">
           <img alt="" class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
           <div class="media-body">
@@ -116,11 +117,14 @@
             </div>
           </div>
         </div>
-      </div><!-- Sidebar Widgets Column -->
+      </div>
+      <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
         <!-- Search Widget -->
         <div class="card my-4">
+          <div class="topsearchbar">
           <h5 class="card-header">Search</h5>
+          </div>
           <div class="card-body">
             <div class="input-group">
               <input class="form-control" placeholder="Search for..." type="text"> <span class="input-group-btn"><button class="btn btn-secondary" type="button"><span class="input-group-btn">Go!</span></button></span>
