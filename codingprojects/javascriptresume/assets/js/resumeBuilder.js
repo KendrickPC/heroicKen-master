@@ -35,19 +35,26 @@ var bio = {
 var work = {
     "jobs": [
         {
-            "employer": "Freelance Developer",
-            "title": "Coding Tutor",
-            "location": "Taipei, TW",
-            "dates": "2014-2016",
+            "employer": "Stanford Hospital & Clinics",
+            "title": "Surgical Admissions Unit",
+            "location": "Palo Alto, CA",
+            "dates": "2010-2012",
             "description": "Tutoring code with English in Taiwan."
  	},
+  //       {
+  //           "employer": "Cambridge Associates, LLC",
+  //           "title": "Intern",
+  //           "location": "Menlo Park, CA",
+  //           "dates": "2010-2014",
+  //           "description": "Reporting Intern"
+ 	// }],
         {
-            "employer": "Private Financial Consulting, LLC",
-            "title": "Operations Analyst",
-            "location": "Palo Alto, CA",
-            "dates": "2010-2014",
-            "description": "I analyzed large sets of data within the company's operations."
- 	}],
+            "employer": "Cambridge Associates, LLC",
+            "title": "Data & Reporting Intern",
+            "location": "Menlo Park, CA",
+            "dates": "2010-2012",
+            "description": "Managing and entering investment manager data into proprietary CA databases, quality checking performance data, evaluating and reconciling historical portfolio data, preparing deliverables, attending individual and team meetings, and preparing and presenting internal presentations."
+    }],
     "display": function () {
         $("#work-experience").append(HTMLworkHeader);
         for (j in work.jobs) {
@@ -106,7 +113,7 @@ var education = {
             "location": "San Francisco, CA",
             "degree": "Copy Editing Certification",
             "majors": "Copy Editing",
-            "dates": "2007 - 2009",
+            "dates": "",
             "url": "www.ucb.edu"
     },
         {
@@ -114,10 +121,17 @@ var education = {
             "location": "Santa Barbara, CA",
             "degree": "BA",
             "majors": "Political Science",
-            "dates": "2003-2007",
+            "dates": "",
             "url": "www.ucsb.edu"
  	}],
     "onlineCourses": [{
+        "title": "Front-End Web Developer Nanodegree",
+        "school": "Udacity",
+        "dates": "2016",
+        "url": "link for more information",
+        "description": "Mastering the skills required to become a Front-End Web Developer, built beautiful & responsive websites optimized for mobile & desktop performance."
+    },
+    {
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
         "dates": "2016",
