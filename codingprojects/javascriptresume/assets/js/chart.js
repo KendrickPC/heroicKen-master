@@ -1,3 +1,5 @@
+window.onload = function() {
+
 var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
   type: "polarArea",
@@ -17,10 +19,10 @@ var myChart = new Chart(ctx, {
     }]
   }
 });
+}
 
-
-new Chart(ctx, {
-    data: data,
-    type: "polarArea",
-    options: options
-});
+// new Chart(ctx, {
+//     data: "data",
+//     type: "polarArea",
+//     options: "options"
+// });
