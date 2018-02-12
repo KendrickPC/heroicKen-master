@@ -11,9 +11,9 @@ var HTMLlocation = '<div class="location-info"><i class="ion-ios-location-outlin
     // contact info
 var HTMLcontactDiv = '<div class="contact-div"></div>';
 var HTMLcontactGeneric = '<div class="contact-item"><div class="contact-attr">%contact%</div><div class="contact-value"><span>%data%</span></div>';
-var HTMLlinkedin = '<div class="contact-item"><a href="https://www.linkedin.com/" target="_blank"><div class="contact-icon-align-box"><i class="ion-social-linkedin contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
-var HTMLgithub = '<div class="contact-item"><a href="https://github.com/" target="_blank"><div class="contact-icon-align-box"><i class="ion-social-github contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
-var HTMLfacebook = '<div class="contact-item"><a href="https://www.facebook.com"target="_blank"><div class="contact-icon-align-box"><i class="ion-social-facebook contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
+var HTMLlinkedin = '<div class="contact-item"><a href="https://www.linkedin.com/in/kenneth-chang-94569a142/" target="_blank"><div class="contact-icon-align-box"><i class="ion-social-linkedin contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
+var HTMLgithub = '<div class="contact-item"><a href="https://github.com/kendrickpc" target="_blank"><div class="contact-icon-align-box"><i class="ion-social-github contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
+var HTMLfacebook = '<div class="contact-item"><a href="https://www.facebook.com/kenneth.f.chang"target="_blank"><div class="contact-icon-align-box"><i class="ion-social-facebook contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
 var HTMLwebsite = '<div class="contact-item"><a href="http://www.everydaykenneth.com" target="_blank"><div class="contact-icon-align-box"><i class="ion-android-globe contact-icon"></i></div></a><div class="contact-value"><span>%data%</span></div>';
 
     // description
