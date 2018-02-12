@@ -586,7 +586,7 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 750px) {
     #header {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -661,7 +661,7 @@ span {
     }
     /*changed from 85% to auto*/
     .short-description {
-        width: 85%;
+        width: auto;
     }
     .contact-item a {
         width: 35px;
