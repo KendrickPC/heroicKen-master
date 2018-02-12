@@ -123,7 +123,7 @@ var education = {
             "degree": "Copy Editing Certification",
             "majors": "Copy Editing",
             "dates": "",
-            "url": "www.ucb.edu"
+            "url": "https://extension.berkeley.edu/edu"
     },
         {
             "name": "University of California, Santa Barbara",
