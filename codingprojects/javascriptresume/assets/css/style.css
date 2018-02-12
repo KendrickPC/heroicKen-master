@@ -541,7 +541,7 @@ a {
 }
 .online-classes-sub-heading:before {
     font-family: "Ionicons";
-    content: "\f3d3";
+    /*content: "\f3d3";*/
     padding-right: 0.5em;
 }
 
@@ -661,7 +661,7 @@ span {
     }
     /*changed from 85% to auto*/
     .short-description {
-        width: 75%;
+        width: 85%;
     }
     .contact-item a {
         width: 35px;

@@ -44,12 +44,12 @@ var HTMLschoolDates = '<div class="date-text"><p>%data%</p></div>';
 var HTMLschoolMajor = '<div class="major"><p class="description-text">Major: %data%</p></div>';
 var HTMLschoolMinor = '<div class="minor"><p class="description-text">Minor: %data%</p></div>';
 var HTMLonlineClassesStart = '<div class="online-classes-entry" style="display: none;"></div>';
-var HTMLonlineClasses = '<p class="sub-header">Online Classes</p>';
-var HTMLonlineClassesSubHeading = '<div class="online-classes-sub-heading"></div>';
-var HTMLonlineTitle = '<p>%data%';
-var HTMLonlineSchool = ' - %data%</p>';
+var HTMLonlineClasses = '<p class="sub-header">Online Degrees</p>';
+var HTMLonlineClassesSubHeading = '<div class="online-classes-sub-heading"> </div>';
+var HTMLonlineTitle = '<p>%data%</p>';
+var HTMLonlineSchool = '<p> - %data%</p>';
 var HTMLonlineDates = '<div class="date-text"><p>%data%</p></div>';
-var HTMLonlineURL = '<a href="https://www.udacity.com/nanodegree" class="colorfy" target="_blank">%data%</a>';
+// var HTMLonlineURL = '<a href="https://www.udacity.com/nanodegree" class="colorfy" target="_blank">%data%</a>';
 var HTMLonlineDescription = '<p class="description-text">%data%</p>';
 // end education section-----
 

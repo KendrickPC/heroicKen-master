@@ -1,7 +1,7 @@
 // begin bio section
 var bio = {
     "name": "Kenneth P. Chang",
-    "role": "Full Stack Engineer",
+    "role": "Full Stack Developer",
     "contacts": {
         "linkedin": "check me out on LinkedIn",
         "github": "check out my GitHub",
@@ -35,22 +35,29 @@ var bio = {
 var work = {
     "jobs": [
         {
+            "employer": "CodeTaiwan.org",
+            "title": "Co-Founder",
+            "location": "Taipei, Taiwan",
+            "dates": "2015-Current",
+            "description": "Co-founded a company specializing in teaching coding fundamentals and EQ skills to kids in orphanages and rural communities around Taipei, Taiwan."
+    },
+        {
+            "employer": "Law Offices of Dean Lloyd",
+            "title": "Paralegal",
+            "location": "Palo Alto, CA",
+            "dates": "2012-2013",
+            "description": "Managed the computer database for the office. Assisted a visually impaired trial attorney in client consultations, trials, case management conferences, settlement officer conferences, and meet & confer conferences. Drafted and revised petitions, orders, statements, discovery requests, responses, and declarations. Research local rules for Santa Clara, San Mateo, San Francisco, and Alameda County using LexisNexis."
+    },
+        {
             "employer": "Stanford Hospital & Clinics",
             "title": "Surgical Admissions Unit",
             "location": "Palo Alto, CA",
             "dates": "2010-2012",
-            "description": "Tutoring code with English in Taiwan."
+            "description": "Assisted surgeons as a communication line for post op waiting room. Managed and maintained EPIC and Bed Board software systems within the surgical admissions unit."
  	},
-  //       {
-  //           "employer": "Cambridge Associates, LLC",
-  //           "title": "Intern",
-  //           "location": "Menlo Park, CA",
-  //           "dates": "2010-2014",
-  //           "description": "Reporting Intern"
- 	// }],
         {
             "employer": "Cambridge Associates, LLC",
-            "title": "Data & Reporting Intern",
+            "title": "Data & Reporting Analyst",
             "location": "Menlo Park, CA",
             "dates": "2010-2012",
             "description": "Managing and entering investment manager data into proprietary CA databases, quality checking performance data, evaluating and reconciling historical portfolio data, preparing deliverables, attending individual and team meetings, and preparing and presenting internal presentations."
@@ -78,18 +85,12 @@ var work = {
 var projects = {
     "projects": [
         {
-            "title": "About Me",
-            "dates": "2015",
-            "description": "Go check out my timeline on www.EveryDayKenneth.com",
-            "images": ["assets/images/humayun.jpg", "assets/images/tropicalBeach.jpg"]
- 	  },
+            "title": "CodeTaiwan.org",
+            "dates": "2015-Current",
+            "description": "Co-Founder of an Emotional Intelligence and Coding School in Taiwan.",
+            "images": ["assets/images/logoCodeTaiwan.jpg", "assets/images/cody.png"]
+ 	  }],
 
-        {
-            "title": "Portfolio",
-            "dates": "2015",
-            "description": "...",
-            "images": ["assets/images/indore.jpg", "assets/images/sfo.jpg"]
- 	}],
     "display": function () {
         $("#projects").append(HTMLprojectHeader);
         for (p in projects.projects) {
@@ -109,6 +110,14 @@ var projects = {
 var education = {
     "schools": [
         {
+            "name": "Notre Dame de Namur Univeristy",
+            "location": "Belmont, CA",
+            "degree": "Post Bacc Pre-Med Program",
+            "majors": "Biochemistry",
+            "dates": "",
+            "url": "www.ndnu.edu"
+    },
+        {
             "name": "University of California, Berkeley Extension",
             "location": "San Francisco, CA",
             "degree": "Copy Editing Certification",
@@ -125,11 +134,11 @@ var education = {
             "url": "www.ucsb.edu"
  	}],
     "onlineCourses": [{
-        "title": "Front-End Web Developer Nanodegree",
+        "title": "Full-Stack Foundations Nanodegree",
         "school": "Udacity",
-        "dates": "2016",
+        "dates": "2017",
         "url": "link for more information",
-        "description": "Mastering the skills required to become a Front-End Web Developer, built beautiful & responsive websites optimized for mobile & desktop performance."
+        "description": "Built complex server-side web applications that use powerful relational databases to persistently store data."
     },
     {
         "title": "Front-End Web Developer Nanodegree",
@@ -143,7 +152,7 @@ var education = {
         "school": "Udacity",
         "dates": "2015",
         "url": "link for more information",
-        "description": "An introductory program for reviewing foundational skills all programmers use."
+        "description": "A review, for an introductory program, practicing foundational skills all programmers use."
     }],
     "display": function () {
         $("#education").append(HTMLeducationHeader);
@@ -163,7 +172,7 @@ var education = {
             $(".online-classes-sub-heading:last").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[o].school));
             $(".online-classes-sub-heading:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[o].dates));
             $(".online-classes-sub-heading:last").append(HTMLonlineDescription.replace("%data%", education.onlineCourses[o].description));
-            $(".online-classes-sub-heading:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[o].url));
+            // $(".online-classes-sub-heading:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[o].url));
         }
     }
 };
