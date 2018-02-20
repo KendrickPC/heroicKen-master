@@ -13,5 +13,14 @@ February 12, 2018
 
  February 15, 2018
 
- Ion Icons CDN
- http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css
+ Use Font Awesome CDN instead.
+     <!-- Font Awesome CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <ul class="social-icons">
+          <a href="https://github.com/kendrickpc" target="_blank"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
+          <a href="https://www.linkedin.com/in/kenneth-chang-94569a142/" target="_blank"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+          <a href="https://www.facebook.com/kenneth.f.chang" target="_blank"><li><i class="fa fa-facebook-square" aria-hidden="true"></i></li></a>
+          <a href="https://www.instagram.com/brotherkendrick/" target="_blank"><li><i class="fa fa-instagram" aria-hidden="true"></i></li></a> 
+        </ul>
+
