@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="Coding Blog Post" name="description">
+  <meta content="EveryDayKenneth.com" name="author">
+  <title>Coding Blog Post</title><!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet"><!-- Custom styles for this template -->
+  <link href="../../css/blog-post.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html"><img src="../../images/eDKLogo.jpg" alt="EveryDayKenneth Logo"></a> <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blog<span class="sr-only">(current)</span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../../codingblog/codingbloghome.html">Coding Blog</a>
+              </li>
+              <li class="divider" role="separator"></li>
+              <li>
+                <a href="../../lifeblog/lifebloghome.html">Life Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        <div class="topblogheading">
+        <!-- Title -->
+        <h1 class="mt-4">Staging Deleted Files in Github</h1><!-- Author -->
+        <p class="lead">by <a href="../../index.html">EveryDayKenneth</a></p>
+        </div>
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on Tuesday, February 20, 2018</p>
+        <hr>
+        <!-- Preview Image -->
+        <img alt="Github Logo" class="img-fluid rounded" src="../../images/codingblogimages/github900x300.jpeg">
+        <hr>
+        <!-- Post Content -->
+        <p class="lead"><strong>The Last Day of Chinese New Years 2018</strong></p>
+        <p>Welcome to the year of the Dog! Dog's are the best! Yes they are! And today, I'm going to share how to stage deleted files on github with the "git add" command.</p>
+<!--         <blockquote class="blockquote">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </footer>
+        </blockquote> -->
+        <p>Normally git add won't add deleted files to your staging area (to be committed), so when you run</p>
+
+        <p><strong>git add . or git *</strong></p>
+        <p>you don't actually stage any deleted files.</p>
+
+        
+        <p>If you want git add to actually stage deleted files, then you have to use the --update or -u flags:</p>
+
+        <p><strong>git add --update</strong> or <strong>git add -u</strong></p>
+        
+        <p>Additionally, you can also use the --all or -A flag, but if I remember correctly, that flag only stages deleted files starting with Git version 2.0...or something like that. Note also that the flag will also stage untracked files, unlike -u, which only updates already-tracked files:</p>
+
+        <p><strong>git add --all</strong> or <strong>git add -A</strong></p>
+        
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+              </div><button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="media mb-4">
+          <img alt="" class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <div class="topsearchbar">
+          <h5 class="card-header">Search</h5>
+          </div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" placeholder="Search for..." type="text"> <span class="input-group-btn"><button class="btn btn-secondary" type="button"><span class="input-group-btn">Go!</span></button></span>
+            </div>
+          </div>
+        </div><!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="../../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="../../about.html">About</a>
+                  </li>
+                  <li>
+                    <a href="../../portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="../../codingblog/codingbloghome.html">Coding Blog</a>
+                  </li>
+                  <li>
+                    <a href="../../lifeblog/lifebloghome.html">Life Blog</a>
+                  </li>
+                  <li>
+                    <a href="../../contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Gratitude</h5>
+          <div class="card-body">
+            Grateful to be alive, healthy, and spiritually fulfilled. =)
+          </div>
+        </div>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js">
+  </script> 
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
