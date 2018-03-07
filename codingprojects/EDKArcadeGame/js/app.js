@@ -1,108 +1,348 @@
-// Enemies our player must avoid
+// Create "game" variable, to hold functions called against the overall game state
+var Game = function() {
+  // Initialize game variables
+  this.paused = false;
+  this.gameOn = false;
+  this.itemDisplayIndex = 0;
+
+  /* Create array of text items to be displayed on screen. Set itemDisplayIndex
+   * to keep track of item being displayed.
+   */
+
+  this.beginningTextIntro = [
+        ['Note: This game will only work with a keyboard.',
+        '',
+        'Ready to score some touchdowns?',
+        '1. Collect five colored balls to increase',
+        '   your life by 1 heart.',
+        '2. Grab a red heart and add a life.'],
+        ['',
+        '',
+        '',
+        '    Game Over, but play again by pressing the spacebar!         ',
+        '',
+        '']
+      ]
+};
+
+/* Toggle between paused and un-paused states by blocking updates.
+ * This boolean is used in Enemy.update and Player.handleInput
+ */
+Game.prototype.togglePause = function() {
+  this.paused = !this.paused;
+};
+
+// Increase number of enemies at end of succesful run count by player count variable
+Game.prototype.addAnEnemy = function() {
+  /* Determine what row to put the new enemy on. This is determined
+   * by finding how many enemies there are, and adding one to the next
+   * stone row. When all rows are filled, start again at the first stone row.
+   */
+
+  var rows = 4;
+  var count = allEnemies.length + 1;
+
+  // Loop to top if count > rows available.
+  if (count > rows) {
+    count -= rows;
+  }
+
+  // Add the new enemy to the allEnemies array
+  var enemy = new Enemy(-100, (count * 83) - 21);
+  allEnemies.push(enemy);
+}
+
+/* Initialize game asset variables. This is called on startup of the game,
+ * or if the player presses R on the keyboard.
+ */
+Game.prototype.gameReset = function() {
+  // Place all enemy objects in an array called allEnemies
+  allEnemies = [];
+  for(var i=1; i<5; i++){
+    var enemy = new Enemy(0-i*101, 83*i-21);
+    allEnemies.push(enemy);
+  }
+
+  /* Instantiate gem offscreen, then randomize its location to start
+   * Do not use 'var', so that it becomes global.
+   */
+  gem = new Gem(-100, -100);
+  gem.reset();
+
+  /* Place the player object in a variable called player
+   * Do not use 'var', so that it becomes global.
+   */
+  player = new Player(303, 404);
+  
+  // Turn on game indicator. This will start game rendering.
+  this.gameOn = true;
+};
+
+/* Handle keyboard input during intro scene. When all text for intro
+ * is complete, show gameplay instructions below game board and start game.
+ * @param {String} key Value of keypress, as determined in the event listener.
+ */
+Game.prototype.handleInput = function(direction) {
+  switch(direction) {
+    case 'spacebar':
+      if (game.itemDisplayIndex < 0){
+        game.itemDisplayIndex++;
+        game.speakerToggle();
+      } else {
+        game.itemDisplayIndex = 1;
+        document.getElementById('instructions').className = '';
+        game.gameReset();
+      }
+      break;
+  }
+};
+
+/* Enemies our player must avoid. Rate is randomized on instantiation.
+ * @param {number} x    X coordinate of enemy displayed.
+ * @param {number} y    Y coordinate of enemy displayed.
+ */
 var Enemy = function(x, y) {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
-    this.x = x;
-    this.y = y;
-    this.multiplier = Math.floor((Math.random() * 4) + 1);
-    // console.log(this.multiplier);
+  this.sprite = 'images/defender.png';
+  this.x = x;
+  this.y = y;
+  this.rate = 100 + Math.floor(Math.random() * 150);
 };
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+
+/* Update the enemy's position, required method for game
+ * @param {number} dt A time delta between ticks.
+ */
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
-    this.x = this.x + 101 * dt * this.multiplier;
+  if (!game.paused){
+    this.x = this.x + (dt * this.rate);
+  }
 
-    if (this.y == player.y && (this.x > player.x - 20 && this.x < player.x + 20)) {
-        // console.log('Collision Logic Successful!!!');
-        player.reset();
-    }
-
-    // If the officer goes off screen, this if statement resets their position with a random multiplier
-    if (this.x > 720) {
-        this.multiplier = Math.floor((Math.random() * 4) + 1);
-        this.reset();
-    }
+  // When bug goes off one side, reappear on the other side
+  if (this.x > 700){
+    this.x = - Math.random() * 177;
+  }
 };
+
+// Randomize start location of enemy
+Enemy.prototype.reset = function() {
+  this.x = 0 - Math.random() * 200;
+};
+
+// Increase speed of enemies slightly
+Enemy.prototype.increaseRate = function() {
+  this.rate += 50;
+};
+
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Enemy.prototype.reset = function(){
-    this.x = -200;
+
+/* Player class, to represent our player.
+ * @param {number} x    X coordinate of player location.
+ * @param {number} y    Y coordinate of player location.
+ */
+var Player = function(x,y) {
+  this.sprite = 'images/footballPlayer.png';
+  this.x = x;
+  this.y = y;
+  this.carryGem = false;
+  this.playerLives = 3;
+  this.blueGemScore = 0;
+  this.orangeGemScore = 0;
+  this.greenGemScore = 0;
+  this.totalScore = 0;
+  this.resetScore = 0; //need for powerup
+  this.count = 0; //count how many times player reach to top row
 };
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-var Player = function(x, y) {
-    this.sprite = 'images/char-boy.png';
-    this.x = x;
-    this.y = y;
+//update score according to gem type
+Player.prototype.score = function() {
+  if(gem.sprite === "images/blueBall.png"){
+      this.blueGemScore++;
+      gem.blueGemCount++;
+      this.resetScore+=30;
+  } else if(gem.sprite === "images/orangeBall.png"){
+      this.orangeGemScore++;
+      gem.orangeGemCount++;
+      this.resetScore+=30;
+  } else if(gem.sprite === "images/greenBall.png"){
+      this.greenGemScore++;
+      gem.greenGemCount++;
+      this.resetScore+=30;
+  } else {
+    this.playerLives++;
+  }
+}
+
+// Reset player's position to start location
+Player.prototype.reset = function() {
+  //reset player sprite to char-boy
+  if (this.y > 0 || (this.y < 0 && (!this.carryGem || !this.carryPowerUp))) {
+    this.sprite = 'images/footballPlayer.png';
+  }
+
+  //  If player is carrying a Gem or powerup, set carryGem to false and carryPowerUp to false and
+  //  * modify sprite name to no longer display that Gem or powerup
+   
+  if (this.carryGem || this.carryPowerUp) {
+    this.carryGem = false;
+    this.carryPowerUp = false;
+    this.sprite = 'images/footballPlayer.png';
+  }
+    //reset back to intial location 
+    this.x = 303;
+    this.y = 404;
 };
 
+/* Handle keyboard input during gameplay.
+ * 'IF' statements verify movement will not allow the player outside the
+ * canvas boundaries before the movement is calculated.
+ * @param {String} direction, the keyCode from the direction pressed
+ */
 Player.prototype.handleInput = function(direction) {
 
-    if (direction === 'up') {
-        this.y = this.y - 80;
-
-    } else if (direction === 'down') {
-        this.y = this.y + 80;
-
-    } else if (direction === 'left') {
-        this.x = this.x - 101;
-
-    } else if (direction === 'right') {
-        this.x = this.x + 101;
-    }
-
-    if (this.x < 0 || this.x > 606) {
-        this.reset();
-    } else if (this.y < -20 || this.y > 404) {
-        this.reset();
-    }
+  // establish right boundary
+  switch(direction) {
+    case 'up':
+      if (this.y > 0 && !game.paused){
+        this.y -= 83;
+      }
+      break;
+    case 'down':
+      if (this.y < 404 && !game.paused) {
+        this.y += 83;
+      }
+      break;
+    case 'left':
+      if (this.x > 0 && !game.paused) {
+        this.x -= 101;
+      }
+      break;
+    case 'right':
+      if (this.x < 556 && !game.paused){
+        this.x += 101;
+      }
+      break;
+    case 'pause':
+      game.togglePause();
+      break;
+    case 'restart':
+      game.gameReset();
+      break;
+  }
 };
 
-Player.prototype.update = function() {
-    this.x = this.x;
-    this.y = this.y;
-};
+
+//Draw player on the screen
 Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.reset = function() {
-    this.x = 303;
-    this.y = 380;
+
+//array of gem images
+gemImages = [
+          'images/ballBlue.png',
+          'images/ballOrange.png',
+          'images/ballGreen.png',
+          'images/ballHeart.png'
+        ];
+
+
+/* Gem class, to represent gem to collect.
+ * @param {number} x    X coordinate of gem location.
+ * @param {number} y    Y coordinate of gem location.
+ */
+var Gem = function (x, y) {
+  this.sprite = gemImages[Math.floor(Math.random() * 4)];
+  this.x = x;
+  this.y = y;
+  this.visible = true;
+  this.blueGemCount++;    // count blue gem collect (not working)
+  this.orangeGemCount++;  // count orange gem collect (not working)
+  this.greenGemCount++;   // count green gem collect (not working)
 };
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
 
-var allEnemies = [];
-var ladyBugYValues = [220, 140, 60];
-for (var i = 0; i < 15; i++) {
-    var x = Math.floor((Math.random() * -1000) + 1);
-    var y = ladyBugYValues[Math.floor((Math.random() * 3))];
-    enemy = new Enemy(x, y);
-    allEnemies.push(enemy);
-} 
-player = new Player(303, 380);
+// Steps to be carried out when an Gem is picked up by the player
+Gem.prototype.pickup = function() {
+  // Set parameters for objects
+  this.visible = false;
+  player.carryGem = true;
 
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
-document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
+  // Change player sprite name to show Gem carried 
+  player.sprite = 'images/footballPlayerWithBall.png';
+
+  // Hide Gem off screen (to be reused on reset)
+  this.x = -101;
+  this.y = -101;
+};
+
+// Drop Gem on game board, update entities to match state.
+Gem.prototype.drop = function() {
+  this.visible = true;
+  player.carryGem = false;
+  this.x = player.x;
+  this.y = player.y;
+};
+
+// Reset will set Gem on game board to be picked up again.
+Gem.prototype.reset = function() {
+  this.x = Math.floor(Math.random() * 5) * 101;
+  this.y = Math.ceil(Math.random() * 4) * 83 - 11;
+  this.visible = true;
+  this.sprite = gemImages[Math.floor(Math.random() * 4)];
+};
+
+// Hide Gem when no longer needed (end game, etc.)
+Gem.prototype.hide = function() {
+  this.visible = false;
+  player.carryGem = false;
+};
+
+// Draw the Gem on the game board
+Gem.prototype.render = function () {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+//Initialize game (implicity global)
+game = new Game();
+
+/* This listens for key presses and sends the keys to your handleInput() methods.
+*/
+
+// 'keydown' prevents the spacebar from scrolling down during the introduction scene for the game
+document.addEventListener('keydown', function(e) {
+  var allowedKeys;
+  if (!game.gameOn) {
+    allowedKeys = {
+      32: 'spacebar'
+    };
+    game.handleInput(allowedKeys[e.keyCode]);
+  } else {
+    allowedKeys = {
+      32: 'spacebar',
+      37: 'left',
+      38: 'up',
+      39: 'right',
+      40: 'down',
+      80: 'pause',
+      82: 'restart'
     };
     player.handleInput(allowedKeys[e.keyCode]);
+  }
+  if (e.keyCode in allowedKeys){
+    e.preventDefault();
+  }
 });
+
+//timeout method to update timer on canvas
+  function timeout() {   
+  var id = setInterval(frame, 30000);
+  function frame() {
+    if(powerup.timer > 0) {
+      powerup.timer--;
+    } else {
+      clearInterval(id);
+    }
+  }
+}
