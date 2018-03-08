@@ -11,7 +11,6 @@ February 12, 2018
 [] Google Cloud Guestbook.py
  https://cloud.google.com/appengine/docs/standard/python/getting-started/creating-guestbook
 
- February 15, 2018
 
  Use Font Awesome CDN instead.
      <!-- Font Awesome CDN -->
@@ -24,3 +23,6 @@ February 12, 2018
           <a href="https://www.instagram.com/brotherkendrick/" target="_blank"><li><i class="fa fa-instagram" aria-hidden="true"></i></li></a> 
         </ul>
 
+
+<!-- Modal code for multiple images -->
+https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images
