@@ -99,7 +99,7 @@ header h1 {
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
-    margin-top: 3em;
+    margin-top: 10em;
     margin-bottom: 3em;
   }
   #cd-timeline::before {
@@ -155,9 +155,12 @@ header h1 {
   margin-top: -12px;
 }
 
+.cd-timeline-img.cd-bulls {
+  background: #41bf4f;
+}
 
 .cd-timeline-img.cd-texas {
-  background: #e2423f;
+  background: #f57573;
 }
 
 .cd-timeline-img.cd-oakland {
@@ -167,7 +170,6 @@ header h1 {
 .cd-timeline-img.cd-picture {
   background: pink;
 }
-
 
 .cd-timeline-img.cd-movie {
   background: #c03b44;
