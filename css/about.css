@@ -99,7 +99,7 @@ header h1 {
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
-    margin-top: 10em;
+    margin-top: 9em;
     margin-bottom: 3em;
   }
   #cd-timeline::before {

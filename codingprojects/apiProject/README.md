@@ -1,14 +1,14 @@
-README.md
+# Google Maps API and Groupon
 
 1. Open up a terminal and type the following: 
-        python -m SimpleHTTPServer 8080
+        python -m SimpleHTTPServer 5000
 
 2. Open up a Browser and go type the following web address:
-        localhost:8080
+        localhost:5000
 
 3. Play with the following project. 
 
-Thank you for checking out my Taipei Maps. 
+## Thank you for checking out my Hong Kong Maps. 
 <!-- Made HTML Changes to errors from the following site: -->
 	https://validator.w3.org/nu/#textarea
 <!-- HTML Semantics Guide -->

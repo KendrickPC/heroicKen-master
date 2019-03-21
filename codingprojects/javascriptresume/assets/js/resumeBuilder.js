@@ -114,6 +114,7 @@ var education = {
             "location": "Belmont, CA",
             "degree": "Post Bacc Pre-Med Program",
             "majors": "Biochemistry",
+            "description": "Studied biochemistry",
             "dates": "",
             "url": "www.ndnu.edu"
     },
@@ -122,6 +123,7 @@ var education = {
             "location": "San Francisco, CA",
             "degree": "Copy Editing Certification",
             "majors": "Copy Editing",
+            "description": "Studied copy editing",
             "dates": "",
             "url": "https://extension.berkeley.edu/edu"
     },
@@ -130,6 +132,7 @@ var education = {
             "location": "Santa Barbara, CA",
             "degree": "BA",
             "majors": "Political Science",
+            "description": "Studied Biochemistry",
             "dates": "",
             "url": "www.ucsb.edu"
  	}],
@@ -163,6 +166,7 @@ var education = {
             $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[e].location));
             $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[e].dates));
             $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[e].majors));
+            $(".education-entry:last").append(HTMLschoolDescription.replace("%data%", education.schools[e].description));
         }
         $("#education").append(HTMLonlineClassesStart);
         $(".online-classes-entry:last").append(HTMLonlineClasses);

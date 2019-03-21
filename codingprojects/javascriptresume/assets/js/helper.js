@@ -43,7 +43,10 @@ var HTMLschoolLocation = '<div class="location-text"><p>%data%</p></div>';
 var HTMLschoolDates = '<div class="date-text"><p>%data%</p></div>';
 var HTMLschoolMajor = '<div class="major"><p class="description-text">Major: %data%</p></div>';
 var HTMLschoolMinor = '<div class="minor"><p class="description-text">Minor: %data%</p></div>';
+var HTMLschoolDescription = '<p class="description-text">%data%</p>';
+
 var HTMLonlineClassesStart = '<div class="online-classes-entry" style="display: none;"></div>';
+
 var HTMLonlineClasses = '<p class="sub-header">Online Degrees</p>';
 var HTMLonlineClassesSubHeading = '<div class="online-classes-sub-heading"> </div>';
 var HTMLonlineTitle = '<p>%data%</p>';
@@ -220,11 +223,3 @@ function logClicks(x, y) {
     console.log('x location: ' + x + '; y location: ' + y);
 }
 // end logClicks function-----
-
-
-
-
-
-
-
-
