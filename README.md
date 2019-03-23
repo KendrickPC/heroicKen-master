@@ -26,3 +26,8 @@ February 12, 2018
 
 <!-- Modal code for multiple images -->
 https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images
+
+
+March 23, 2019
+
+Fix the bugs in code. 
