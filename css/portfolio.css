@@ -6,22 +6,27 @@
 
 body {
   padding-top: 54px;
+  font-family: "Source Code Pro", sans-serif;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+    font-family: "Source Code Pro", sans-serif;
   }
 }
 
 .portfolio-item {
   margin-bottom: 30px;
+  font-family: "Source Code Pro", sans-serif;
 }
 
 .pagination {
   margin-bottom: 30px;
+  font-family: "Source Code Pro", sans-serif;
 }
 
 .topportfolioheading {
 	margin-top: 125px;
+	font-family: "Source Code Pro", sans-serif;
 }

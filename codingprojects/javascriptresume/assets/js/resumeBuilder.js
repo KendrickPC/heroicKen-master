@@ -35,10 +35,17 @@ var bio = {
 var work = {
     "jobs": [
         {
+            "employer": "Freelance Full-Stack Web Developer",
+            "title": "Full-Stack Web Developer",
+            "location": "Taipei, Taiwan",
+            "dates": "2014-Current",
+            "description": "My projects over the past few years can be seen at EveryDayKenneth.com"
+    },
+        {
             "employer": "CodeTaiwan.org",
             "title": "Co-Founder",
             "location": "Taipei, Taiwan",
-            "dates": "2015-Current",
+            "dates": "2015-2018",
             "description": "Co-founded a company specializing in teaching coding fundamentals and EQ skills to kids in orphanages and rural communities around Taipei, Taiwan."
     },
         {
@@ -46,14 +53,14 @@ var work = {
             "title": "Paralegal",
             "location": "Palo Alto, CA",
             "dates": "2012-2013",
-            "description": "Managed the computer database for the office. Assisted a visually impaired trial attorney in client consultations, trials, case management conferences, settlement officer conferences, and meet & confer conferences. Drafted and revised petitions, orders, statements, discovery requests, responses, and declarations. Research local rules for Santa Clara, San Mateo, San Francisco, and Alameda County using LexisNexis."
+            "description": "Managed the computer database for the office and rewrote the entire webpage from scratch. Assisted a visually impaired trial attorney in client consultations, trials, case management conferences, settlement officer conferences, and meet & confer conferences. Drafted and revised petitions, orders, statements, discovery requests, responses, and declarations. Research local rules for Santa Clara, San Mateo, San Francisco, and Alameda County using LexisNexis."
     },
         {
             "employer": "Stanford Hospital & Clinics",
             "title": "Surgical Admissions Unit",
             "location": "Palo Alto, CA",
             "dates": "2010-2012",
-            "description": "Assisted surgeons as a communication line for post op waiting room. Managed and maintained EPIC and Bed Board software systems within the surgical admissions unit."
+            "description": "Managed and maintained EPIC and Bed Board software systems within the surgical admissions unit."
  	},
         {
             "employer": "Cambridge Associates, LLC",
@@ -86,9 +93,9 @@ var projects = {
     "projects": [
         {
             "title": "CodeTaiwan.org",
-            "dates": "2015-Current",
-            "description": "Co-Founder of an Emotional Intelligence and Coding School in Taiwan.",
-            "images": ["assets/images/logoCodeTaiwan.jpg", "assets/images/cody.png"]
+            "dates": "2015-2018",
+            "description": "Co-Founder of an Emotional Intelligence and Coding School in Taiwan. Our curriculum is currently being used at 敦化國小.",
+            "images": ["assets/images/codetaiwan.png", "assets/images/cody.png"]
  	  }],
 
     "display": function () {
@@ -132,7 +139,7 @@ var education = {
             "location": "Santa Barbara, CA",
             "degree": "BA",
             "majors": "Political Science",
-            "description": "Studied Biochemistry",
+            "description": "Minored in Biochemistry",
             "dates": "",
             "url": "www.ucsb.edu"
  	}],
@@ -149,14 +156,9 @@ var education = {
         "dates": "2016",
         "url": "link for more information",
         "description": "Mastering the skills required to become a Front-End Web Developer, built beautiful & responsive websites optimized for mobile & desktop performance."
- 	},
-                      {   
-        "title": "Intro to Programming Nanodegree",
-        "school": "Udacity",
-        "dates": "2015",
-        "url": "link for more information",
-        "description": "A review, for an introductory program, practicing foundational skills all programmers use."
-    }],
+ 	}],
+
+
     "display": function () {
         $("#education").append(HTMLeducationHeader);
         for (e in education.schools) {
