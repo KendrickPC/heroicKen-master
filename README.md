@@ -28,6 +28,11 @@ February 12, 2018
 https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images
 
 
-March 23, 2019
+March 25, 2019
 
-Fix the bugs in code. 
+ABOUT ME Section
+Color Palettes:
+7fe7cc
+dfe38e
+efca8c
+f17e7e
