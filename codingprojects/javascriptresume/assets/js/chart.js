@@ -4,7 +4,7 @@ var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
   type: "polarArea",
   data: {
-    labels: ["SWIFT", "JQUERY", "JAVASCRIPT", "PYTHON", "REACT", "NODEJS&EXPRESS", "API"],
+    labels: ["SWIFT", "JQUERY", "JAVASCRIPT", "PYTHON", "REACT", "NODEJS&EXPRESS", "APIs"],
     datasets: [{
       backgroundColor: [
         "#adddcf",
