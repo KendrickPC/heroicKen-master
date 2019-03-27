@@ -27,3 +27,16 @@
 
 	How I got "not.toBeLessThan(1)"
 <!-- http://stackoverflow.com/questions/24090270/how-can-i-test-that-a-value-is-greater-than-or-equal-to-in-jasmine -->
+
+<!-- Google Cloud Platform Error Throwback -->
+
+    [x]	at stack (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:1442:17)
+    at buildExpectationResult (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:1419:14)
+    at Spec.expectationResultFactory (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:533:18)
+    at Spec.addExpectationResult (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:293:34)
+    at Expectation.addExpectationResult (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:477:21)
+    at Expectation.toEqual (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/lib/jasmine-2.1.2/jasmine.js:1371:12)
+    at http://www.everydaykenneth.com/codingprojects/feedReaderTesting/jasmine/spec/feedreader.js:102:47
+    at Object.success (http://www.everydaykenneth.com/codingprojects/feedReaderTesting/js/app.js:65:17)
+    at j (http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js:2:26860)
+    at Object.fireWith [as resolveWith] (http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js:2:27673)

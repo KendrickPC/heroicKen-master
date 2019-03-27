@@ -28,11 +28,10 @@ February 12, 2018
 https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images
 
 
-March 25, 2019
+April 2019 To Do List:
 
-ABOUT ME Section
-Color Palettes:
-7fe7cc
-dfe38e
-efca8c
-f17e7e
+[] Update Log Analysis Description for Portfolio
+[] Change database name from Logs Analysis
+
+[] Test Jasmine Feed Reader testing on Heroku servers. 
+[] Update Jasmine Feed Reader testing description on Portfolio
