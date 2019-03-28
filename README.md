@@ -35,3 +35,5 @@ April 2019 To Do List:
 
 [] Test Jasmine Feed Reader testing on Heroku servers. 
 [] Update Jasmine Feed Reader testing description on Portfolio
+
+TESTING
