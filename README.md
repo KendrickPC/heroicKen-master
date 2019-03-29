@@ -1,12 +1,4 @@
-Thursday, February 08, 2018
-[x] Fix chart.js on Google App Engine Servers. 
-
-[x] Chart.js
-	http://www.chartjs.org/docs/latest/
-
-[x] Fix centering issue around CV Javascript project for Iphone 7 Plus
-
-February 12, 2018
+# April 2019 To Do List:
 
 [] Google Cloud Guestbook.py
  https://cloud.google.com/appengine/docs/standard/python/getting-started/creating-guestbook
@@ -28,7 +20,7 @@ February 12, 2018
 https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images
 
 
-April 2019 To Do List:
+### April 2019 To Do List:
 
 [] Update Log Analysis Description for Portfolio
 [] Change database name from Logs Analysis
