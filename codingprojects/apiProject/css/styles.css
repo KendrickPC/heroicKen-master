@@ -1,47 +1,117 @@
-/*custom style sheet for apiProject*/
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*Notes/phone number to float right*/
+.content-row {
+    float: right;
+}
+
+/*Playing around with first-heading */
+.h3, h3 {
+    font-size: 30px;
+}
+
+.container-fluid {
+    height: 100%;
+    padding: 0px;
+}
+
+#main-title:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#main-title {
+    color: black;
+    width: 295px;
+}
+
+.drop-category {
+    font-weight: bold;
+}
+
+.button-row {
+    margin: 20px 0px 20px 0px;
+}
+
+.fa, .fas {
+    float: right;
+}
+
+.filterLight {
+    color: black;
+}
+
+.selection-button:hover {
+    cursor: pointer;
+    background-color: darkgray;
+    border: solid 1px black;
+}
+
+.selection-button {
+    border: solid 1px lightgray;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+/*    margin-left: 20px;
+    margin-right: 20px;*/
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.info-div {
+    max-width: 350px;
+}
+
+.main {
+    height: 100%;
+}
+
 #map {
-    bottom:0;
-    height: 83%;
-    left: 0;
-    position: absolute;
-    right: 0;
+    height: 100%;
 }
 
-.btn-default {
-	background-color: #bbb;
-	color: white;
+.mainImg {
+    height: 70px;
+    width: 70px;
+    border-radius: 4px;
 }
 
-h1 {
-	font-size: 18px;
-    text-align: center;
+.activeDistrict {
+    /*font-weight: bold;*/
 }
 
-.row {
-	margin-left: 5px;
+.inactiveDistrict {
+    font-style: italic;
+    font-weight: light;
+    text-decoration: line-through;
 }
 
-.menu-toggled {
-    border: solid;
-    text-align: center;
+.navbar-default .navbar-nav>li> .inactiveDistrict:hover {
+    text-decoration: line-through;
 }
 
-#menu-toggled {
-    /*margin-left: -15px;*/
+.foursquare-logo {
+    height: 25px;
 }
 
-.gm-style .gm-style-iw {
-    font-weight: 300;
-    font-size: 8px;
- }
-
-.resultsList {
-    color: white;
-    padding-left: 10px;
+.alert {
+    margin: 0px;
 }
 
-.form-control {
-    width: 150px;
+/* Primary mobile responsive CSS handled by the bootsnipp */
+/*width: 235px*/
+@media (max-width: 768px) {
+    #main-title {
+        width: 245px;
+    }
+
+    .attribution {
+        margin-left: 15px;
+    }
 }
