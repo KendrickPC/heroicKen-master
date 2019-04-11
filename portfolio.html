@@ -1,252 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Coding Portfolio">
-    <meta name="author" content="EveryDayKenneth">
-    <title>EveryDayKenneth | Portfolio</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio.css" rel="stylesheet">
-    <!-- Used to create modal images -->
-    <link href="css/modal.css" rel="stylesheet">
-    <!-- Source Code Pro Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coding Portfolio">
+  <meta name="author" content="EveryDayKenneth">
+  <title>EveryDayKenneth | Portfolio</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/portfolio.css" rel="stylesheet">
+  <!-- Used to create modal images -->
+  <link href="css/modal.css" rel="stylesheet">
+  <!-- Source Code Pro Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/eDKLogo.jpg">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-              <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blog</a><span class="caret"></span>
-              <ul class="dropdown-menu">
-                <li><a href="codingblog/codingbloghome.html">Coding Blog</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="lifeblog/lifebloghome.html">Life Blog</a></li>
-                <li role="separator" class="divider"></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-  <div class="topportfolioheading">
-      <!-- Page Heading -->
-      <h1 class="my-4">Developer Portfolio
-        <small>Projects</small>
-      </h1>
+    <a class="navbar-brand" href="index.html"><img src="images/eDKLogo.jpg"></a> <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a> <span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blog</a><span class="caret"></span>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="codingblog/codingbloghome.html">Coding Blog</a>
+            </li>
+            <li class="divider" role="separator"></li>
+            <li>
+              <a href="lifeblog/lifebloghome.html">Life Blog</a>
+            </li>
+            <li class="divider" role="separator"></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
-      <div class="row">
-       <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/jsResume700x400.png" alt="A screenshot of my resume written in Javascript.">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="codingprojects/javascriptresume/index.html" target="_blank">Javascript Curriculum Vitae</a>
-              </h4>
-              <p class="card-text">My curriculum vitae written in Javascript</p>
-            </div>
-          </div>
+</nav><!-- Page Content -->
+<div class="container">
+  <div class="topportfolioheading">
+    <!-- Page Heading -->
+    <h1 class="my-4">Developer Portfolio <small>Projects</small></h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Taipei Night Markets" class="myImg card-img-top" src="images/portfoliohomeimages/apiProject700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/logsAnalysis700x400.png" alt="Logs Analysis">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://github.com/KendrickPC/vagrantpsql" target="_blank">Logs Analysis</a>
-              </h4>
-              <p class="card-text">
-                A large database is explored, by building complex SQL queries, to draw conclusions from the data. (Testing)
-              </p>
-            </div>
-          </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="codingprojects/apiProject/index.html" target="_blank">Taipei Night Markets</a></h4>
+          <p class="card-text">A project using APIs from Google Maps and FourSquare, to organize night markets in Taiwan, for people who can't read Chinese.</p>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/jasmine2-700x400.png" alt="Jasmine Feed Reader Testing Github Repo">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://github.com/KendrickPC/feed-reader-testing" target="_blank">Jasmine Feed Reader Testing</a>
-              </h4>
-              <p class="card-text">Using Jasmine to write a number of tests against pre-existing applications against the underlying business logic of the applications, event handling, and DOM manipulation.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/footballArcade700x400.png" alt="Football Arcade Game">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="codingprojects/EDKArcadeGame/index.html" target="_blank">HTML 5 Canvas Game</a>
-              </h4>
-              <p class="card-text">Recreated a classic arcade game with object oriented Javascript.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/pythonBook700x400.png" alt="Python Crash Course Book Review">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://github.com/KendrickPC/pythoncrashcourse" target="_blank">Python Crash Course</a>
-              </h4>
-              <p class="card-text">A complete read through of this book with all chapters and projects completed.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/coderbyte700x400.png" alt="Coderbyte Full Stack Web Development Course">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://github.com/KendrickPC/coderByte" target="_blank">Coderbyte Full Stack Web Development</a>
-              </h4>
-              <p class="card-text">Using Jasmine to write a number of tests against pre-existing applications, against the underlying business logic of the applications, event handling, and DOM manipulation.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/apiProject700x400.png" alt="Taipei Night Markets">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="codingprojects/apiProject/index.html" target="_blank">Taipei Night Markets</a>
-              </h4>
-              <p class="card-text">A project using APIs from Google Maps and FourSquare, to organize night markets in Taiwan, for people who can't read Chinese.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-              <!-- Trigger the Modal -->
-              <!-- uses alt text as caption -->
-              <img class="myImg card-img-top" src="images/portfoliohomeimages/javascriptresume700x400.png" alt="A screenshot of my Javascript coded resume">
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="codingprojects/javascriptresume/index.html" target="_blank">Javascript Coded Curriculum Vitae</a>
-              </h4>
-              <p class="card-text">Ken's curriculum vitae coded in javascript</p>
-            </div>
-          </div>
-        </div> 
       </div>
-      <!-- /.row -->
-
-      <!-- Pagination -->
-<!--       <ul class="pagination justify-content-center">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="A screenshot of my resume written in Javascript." class="myImg card-img-top" src="images/portfoliohomeimages/jsResume700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="codingprojects/javascriptresume/index.html" target="_blank">Javascript Curriculum Vitae</a></h4>
+          <p class="card-text">My curriculum vitae written in Javascript</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Logs Analysis" class="myImg card-img-top" src="images/portfoliohomeimages/logsAnalysis700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="https://github.com/KendrickPC/vagrantpsql" target="_blank">Logs Analysis</a></h4>
+          <p class="card-text">A large database is explored, by building complex SQL queries, to draw conclusions from the data. (Testing)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Jasmine Feed Reader Testing Github Repo" class="myImg card-img-top" src="images/portfoliohomeimages/jasmine2-700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="https://github.com/KendrickPC/feed-reader-testing" target="_blank">Jasmine Feed Reader Testing</a></h4>
+          <p class="card-text">Using Jasmine to write a number of tests against pre-existing applications against the underlying business logic of the applications, event handling, and DOM manipulation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Football Arcade Game" class="myImg card-img-top" src="images/portfoliohomeimages/footballArcade700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="codingprojects/EDKArcadeGame/index.html" target="_blank">HTML 5 Canvas Game</a></h4>
+          <p class="card-text">Recreated a classic arcade game with object oriented Javascript.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Python Crash Course Book Review" class="myImg card-img-top" src="images/portfoliohomeimages/pythonBook700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="https://github.com/KendrickPC/pythoncrashcourse" target="_blank">Python Crash Course</a></h4>
+          <p class="card-text">A complete read through of this book with all chapters and projects completed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="Coderbyte Full Stack Web Development Course" class="myImg card-img-top" src="images/portfoliohomeimages/coderbyte700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="https://github.com/KendrickPC/coderByte" target="_blank">Coderbyte Full Stack Web Development</a></h4>
+          <p class="card-text">Using Jasmine to write a number of tests against pre-existing applications, against the underlying business logic of the applications, event handling, and DOM manipulation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <!-- Trigger the Modal -->
+        <!-- uses alt text as caption -->
+        <img alt="A screenshot of my Javascript coded resume" class="myImg card-img-top" src="images/portfoliohomeimages/javascriptresume700x400.png"> <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span> <!-- Modal Content (The Image) -->
+           <img class="modal-content" id="img01"> <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><a href="codingprojects/javascriptresume/index.html" target="_blank">Javascript Coded Curriculum Vitae</a></h4>
+          <p class="card-text">Ken's curriculum vitae coded in javascript</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
+  <!-- Pagination -->
+  <!--       <ul class="pagination justify-content-center">
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
@@ -269,17 +219,15 @@
           </a>
         </li>
       </ul> -->
+</div><!-- /.container -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js">
+</script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js">
+</script> 
+<script src="js/modal.js">
+</script>
 
-    </div>
-    <!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/modal.js"></script>
-
-  </body>
+</body>
 
 </html>

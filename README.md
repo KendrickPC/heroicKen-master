@@ -29,3 +29,5 @@ https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-imag
 [] Update Jasmine Feed Reader testing description on Portfolio
 
 TESTING
+
+Need to re-work Foursquare API Code on Google Cloud Servers.
